@@ -17,7 +17,7 @@ module.exports = (duration) => {
 			'-i',
 			'dummy.jpg',
 			'-t',
-			duration,
+			`${duration}`,
 			'-r',
 			'1',
 			'-c:v',
