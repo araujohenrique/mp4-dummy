@@ -1,7 +1,7 @@
 const fs = require("fs");
 const ffmpeg = require("ffmpeg.js/ffmpeg-mp4.js");
 
-exports = (duration) => {
+module.exports = (duration) => {
 	let stdout = "";
 	let stderr = "";
 	const results = ffmpeg({
