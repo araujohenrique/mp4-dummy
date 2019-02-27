@@ -1,26 +1,8 @@
 const ffmpeg = require("ffmpeg.js/ffmpeg-mp4.js");
-const jpeg = require("jpeg-js");
+const dummyJpg = require("./dummy-jpg.js");
 
-module.exports = (duration) => {
-	const JPG_WIDTH = 320;
-	const JPG_HEIGHT = 180;
-	const jpegBuffer = new Buffer(JPG_WIDTH * JPG_HEIGHT * 4);
-	var i = 0;
-	while (i < jpegBuffer.length) {
-		jpegBuffer[i++] = 0xFF; // red
-		jpegBuffer[i++] = 0x00; // green
-		jpegBuffer[i++] = 0x00; // blue
-		jpegBuffer[i++] = 0xFF; // alpha - ignored in JPEGs
-	}
-	const jpegImageData = jpeg.encode(
-		{
-			data: jpegBuffer,
-			width: JPG_WIDTH,
-			height: JPG_HEIGHT
-		},
-		1,
-	)
-
+module.exports = async (duration) => {
+	const jpegBuffer = await dummyJpg();
 	let stdout = "";
 	let stderr = "";
 	const results = ffmpeg(
@@ -28,7 +10,7 @@ module.exports = (duration) => {
 			MEMFS: [
 				{
 					name: 'dummy.jpg',
-					data: jpegImageData.data,
+					data: jpegBuffer,
 				}
 			],
 			arguments: [
