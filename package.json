@@ -1,12 +1,12 @@
 {
   "name": "mp4-dummy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "main.js",
   "dependencies": {
-    "ffmpeg.js": "3.1.9001"
+    "ffmpeg.js": "3.1.9001",
+    "jpeg-js": "0.3.4"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maximedupre/mp4-dummy.git"
