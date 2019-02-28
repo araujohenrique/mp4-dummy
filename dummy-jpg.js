@@ -1,7 +1,9 @@
-const sharp = require('sharp');
+const jpeg = require('jpeg-js');
 
 module.exports = () => {
-	const dummyBuffer = Buffer.from('<svg><rect width="200" height="200"/></svg>');
+	const width = 100;
+	const height = 100;
+	const data = new Buffer(width * height * 4);
 
-	return sharp(dummyBuffer).jpeg().toBuffer();
+	return jpeg.encode({ data, width, height }).data;
 }

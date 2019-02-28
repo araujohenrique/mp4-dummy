@@ -1,10 +1,11 @@
 const ffmpeg = require("ffmpeg.js/ffmpeg-mp4.js");
 const dummyJpg = require("./dummy-jpg.js");
 
-module.exports = async (duration) => {
-	const jpegBuffer = await dummyJpg();
+module.exports = (duration) => {
+	const jpegBuffer = dummyJpg();
 	let stdout = "";
 	let stderr = "";
+
 	const results = ffmpeg(
 		{
 			MEMFS: [
@@ -20,10 +21,8 @@ module.exports = async (duration) => {
 				'dummy.jpg',
 				'-t',
 				`${duration}`,
-				'-r',
-				'1',
-				'-c:v',
-				'libx264',
+				'-pix_fmt',
+				'yuv420p',
 				'output.mp4'
 			],
 			print: function (data) {
