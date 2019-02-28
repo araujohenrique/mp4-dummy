@@ -21,6 +21,7 @@ module.exports = (duration) => {
 				},
 			],
 			arguments: [
+				'-y',
 				'-i',
 				'dummy.mp3',
 				'-i',
