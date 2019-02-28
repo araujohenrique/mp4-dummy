@@ -1,11 +1,12 @@
 {
   "name": "mp4-dummy",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "main.js",
   "dependencies": {
     "ffmpeg.js": "3.1.9001",
-    "jpeg-js": "0.3.4"
+    "jpeg-js": "0.3.4",
+    "lamejs": "1.2.0"
   },
   "repository": {
     "type": "git",

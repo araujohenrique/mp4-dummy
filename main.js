@@ -1,8 +1,10 @@
 const ffmpeg = require("ffmpeg.js/ffmpeg-mp4.js");
 const dummyJpg = require("./dummy-jpg.js");
+const dummyMp3 = require("./dummy-mp3.js");
 
 module.exports = (duration) => {
-	const jpegBuffer = dummyJpg();
+	const jpegFile = dummyJpg();
+	const mp3File = dummyMp3(duration)[0];
 	let stdout = "";
 	let stderr = "";
 
@@ -10,13 +12,17 @@ module.exports = (duration) => {
 		{
 			MEMFS: [
 				{
+					name: 'dummy.mp3',
+					data: mp3File,
+				},
+				{
 					name: 'dummy.jpg',
-					data: jpegBuffer,
-				}
+					data: jpegFile,
+				},
 			],
 			arguments: [
-				'-loop',
-				'1',
+				'-i',
+				'dummy.mp3',
 				'-i',
 				'dummy.jpg',
 				'-t',
