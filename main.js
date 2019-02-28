@@ -38,9 +38,6 @@ module.exports = (duration) => {
 				stderr += data + "\n";
 			},
 			onExit: function (code) {
-				console.log("Process exited with code " + code);
-				console.log(stdout);
-				console.log(stderr);
 			},
 		}
 	);
