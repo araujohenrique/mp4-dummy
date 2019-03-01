@@ -43,5 +43,5 @@ module.exports = (duration) => {
 		}
 	);
 
-	return results.MEMFS[0].data;
+	return results.MEMFS[0].data.buffer;
 }
