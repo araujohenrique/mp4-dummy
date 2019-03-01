@@ -1,9 +1,9 @@
 const ffmpeg = require("ffmpeg.js/ffmpeg-mp4.js");
 const mp3Dummy = require('mp3-dummy');
-const jpgDummy = require("./dummy-jpg.js");
+const jpgDummy = require("jpg-dummy");
 
 module.exports = (duration) => {
-	const jpegFile = jpgDummy();
+	const jpegFile = jpgDummy(100, 100);
 	const mp3File = mp3Dummy(duration);
 	let stdout = "";
 	let stderr = "";
