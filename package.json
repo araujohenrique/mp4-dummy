@@ -1,21 +1,27 @@
 {
   "name": "mp4-dummy",
   "version": "1.1.2",
-  "description": "",
+  "description": "Simple browser/node module to generate a dummy mp4 file of a specific duration. The mp4 file contains a fixed black image and a silent audio track.",
+  "keywords": [
+    "mp4",
+    "dummy",
+    "test",
+    "double",
+    "unit",
+    "integration",
+    "node",
+    "browser",
+    "ffmpeg"
+  ],
+  "homepage": "https://github.com/maximedupre/mp4-dummy#readme",
+  "bugs": "https://github.com/maximedupre/mp4-dummy/issues",
+  "license": "MIT",
+  "author": "Maxime Dupré (https://github.com/maximedupre)",
   "main": "main.js",
+  "repository": "github:maximedupre/mp4-dummy",
   "dependencies": {
     "ffmpeg.js": "3.1.9001",
     "jpg-dummy": "1.1.0",
     "mp3-dummy": "1.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maximedupre/mp4-dummy.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/maximedupre/mp4-dummy/issues"
-  },
-  "homepage": "https://github.com/maximedupre/mp4-dummy#readme"
+  }
 }
