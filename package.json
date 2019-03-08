@@ -1,6 +1,6 @@
 {
   "name": "mp4-dummy",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Simple browser/node module to generate a dummy mp4 file of a specific duration. The mp4 file contains a fixed black image and a silent audio track.",
   "keywords": [
     "mp4",
@@ -21,7 +21,7 @@
   "repository": "github:maximedupre/mp4-dummy",
   "dependencies": {
     "ffmpeg.js": "3.1.9001",
-    "jpg-dummy": "1.1.0",
+    "jpg-dummy": "1.1.1",
     "mp3-dummy": "1.1.0"
   }
 }
