@@ -12,20 +12,21 @@ module.exports = (duration) => {
 		{
 			MEMFS: [
 				{
-					name: 'dummy.mp3',
-					data: mp3File,
-				},
-				{
 					name: 'dummy.jpg',
 					data: jpegFile,
 				},
+				{
+					name: 'dummy.mp3',
+					data: mp3File,
+				},
 			],
 			arguments: [
-				'-y',
-				'-i',
-				'dummy.mp3',
+				'-loop',
+				'1',
 				'-i',
 				'dummy.jpg',
+				'-i',
+				'dummy.mp3',
 				'-t',
 				`${duration}`,
 				'-pix_fmt',
@@ -39,6 +40,7 @@ module.exports = (duration) => {
 				stderr += data + "\n";
 			},
 			onExit: function (code) {
+				// console.log(stderr)
 			},
 		}
 	);
