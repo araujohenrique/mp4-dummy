@@ -10,4 +10,4 @@ Simple browser/node module to generate a dummy mp4 file of a specific duration. 
 	const mp4File = mp4Dummy(10)
 
 ## API
-    mp4Dummy(duration: number): ArrayBuffer
+    mp4Dummy(nbSeconds: number): ArrayBuffer

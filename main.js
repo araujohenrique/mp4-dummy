@@ -2,9 +2,9 @@ const ffmpeg = require("ffmpeg.js/ffmpeg-mp4.js");
 const mp3Dummy = require('mp3-dummy');
 const jpgDummy = require("jpg-dummy");
 
-module.exports = (duration) => {
+module.exports = (nbSeconds) => {
 	const jpegFile = jpgDummy(100, 100);
-	const mp3File = mp3Dummy(duration);
+	const mp3File = mp3Dummy(nbSeconds);
 	let stdout = "";
 	let stderr = "";
 
@@ -28,7 +28,7 @@ module.exports = (duration) => {
 				'-i',
 				'dummy.mp3',
 				'-t',
-				`${duration}`,
+				`${nbSeconds}`,
 				'-pix_fmt',
 				'yuv420p',
 				'output.mp4'
