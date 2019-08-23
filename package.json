@@ -1,6 +1,6 @@
 {
   "name": "mp4-dummy",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Simple browser/node module to generate a dummy mp4 file of a specific duration. The mp4 file contains a fixed black image and a silent audio track.",
   "keywords": [
     "mp4",

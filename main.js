@@ -31,7 +31,8 @@ module.exports = (nbSeconds) => {
 				`${nbSeconds}`,
 				'-pix_fmt',
 				'yuv420p',
-				'output.mp4'
+				'output.mp4',
+				'-nostdin'
 			],
 			print: function (data) {
 				stdout += data + "\n";
